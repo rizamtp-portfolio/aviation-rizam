@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Rizam T P | Aviation Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,16 +18,64 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
-color:#333;
+background:#f4f8fc;
+color:#222;
 overflow-x:hidden;
+}
+
+.airplane{
+position:fixed;
+top:120px;
+left:-100px;
+font-size:45px;
+z-index:9999;
+animation:fly 18s linear infinite;
+}
+
+@keyframes fly{
+0%{
+left:-120px;
+transform:translateY(0px);
+}
+25%{
+transform:translateY(-20px);
+}
+50%{
+transform:translateY(15px);
+}
+100%{
+left:110%;
+transform:translateY(0px);
+}
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+padding:20px 50px;
+background:rgba(0,20,40,.95);
+display:flex;
+justify-content:space-between;
+z-index:999;
+}
+
+nav h2{
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
 }
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,30,60,.65),rgba(0,30,60,.65)),
+linear-gradient(rgba(0,25,55,.6),rgba(0,25,55,.6)),
 url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80');
+
 background-size:cover;
 background-position:center;
 display:flex;
@@ -36,70 +83,39 @@ justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
-padding:20px;
-}
-
-.hero-content{
-animation:fadeIn 2s;
 }
 
 .hero h1{
-font-size:4rem;
+font-size:4.5rem;
 font-weight:700;
-letter-spacing:2px;
 }
 
-.hero h2{
-font-size:1.3rem;
+.hero p{
+font-size:1.2rem;
 margin-top:15px;
-font-weight:400;
+line-height:1.8;
 }
 
 .btn{
 display:inline-block;
-margin:10px;
+margin-top:20px;
 padding:14px 30px;
 background:white;
 color:#003366;
 text-decoration:none;
 border-radius:40px;
 font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-5px);
 }
 
 section{
-padding:80px 10%;
+padding:100px 10%;
 }
 
 .title{
-text-align:center;
 font-size:2rem;
 color:#003366;
+text-align:center;
 margin-bottom:40px;
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 2fr;
-gap:40px;
-align-items:center;
-}
-
-.profile{
-width:260px;
-height:260px;
-border-radius:50%;
-background:#003366;
-margin:auto;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-font-size:4rem;
 }
 
 .card-grid{
@@ -111,9 +127,9 @@ gap:25px;
 .card{
 background:white;
 padding:25px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.4s;
 }
 
 .card:hover{
@@ -128,18 +144,13 @@ margin:auto;
 .timeline-item{
 background:white;
 padding:20px;
-margin-bottom:20px;
-border-left:5px solid #0077ff;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
+margin-bottom:15px;
+border-left:5px solid #007bff;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .skill{
 margin-bottom:20px;
-}
-
-.skill p{
-font-weight:600;
-margin-bottom:8px;
 }
 
 .bar{
@@ -151,8 +162,7 @@ overflow:hidden;
 
 .fill{
 height:100%;
-background:#0077ff;
-animation:grow 3s forwards;
+background:#007bff;
 }
 
 .contact{
@@ -160,33 +170,18 @@ text-align:center;
 }
 
 .contact a{
-display:inline-block;
-margin:10px;
-text-decoration:none;
-font-weight:600;
+display:block;
+margin:15px;
 color:#003366;
+font-weight:600;
+text-decoration:none;
 }
 
 footer{
 background:#002244;
 color:white;
 text-align:center;
-padding:20px;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(50px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes grow{
-from{width:0;}
+padding:25px;
 }
 
 </style>
@@ -194,12 +189,152 @@ from{width:0;}
 
 <body>
 
+<div class="airplane">✈️</div>
+
+<nav>
+
+<h2>Rizam Aviation</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#training">Training</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
 <h1>RIZAM T P</h1>
 
-<h2>
+<p>
 AVIATION GROUND OPERATIONS<br>
-AIRLINE LOGISTICS<br
+AIRLINE LOGISTICS<br>
+AIRPORT PASSENGER SERVICES
+</p>
+
+<a href="#" class="btn">
+Download Aviation CV
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<p style="text-align:center;max-width:900px;margin:auto;">
+BBA Aviation & Logistics graduate with aviation industry training through WingsWay Training Institute, Dubai. Passionate about airport operations, passenger service excellence, airline logistics and ground handling operations.
+</p>
+
+</section>
+
+<section id="training">
+
+<h2 class="title">Training Areas</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>Airport Ground Operations</h3>
+<p>Operational workflow and airport functions.</p>
+</div>
+
+<div class="card">
+<h3>Passenger Services</h3>
+<p>Check-in and boarding procedures.</p>
+</div>
+
+<div class="card">
+<h3>Airline Documentation</h3>
+<p>Operational and passenger documentation.</p>
+</div>
+
+<div class="card">
+<h3>Aviation Safety</h3>
+<p>Ground safety awareness and procedures.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Internship Timeline</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">Passenger Check-In Procedures</div>
+
+<div class="timeline-item">Baggage Handling Operations</div>
+
+<div class="timeline-item">Boarding Coordination</div>
+
+<div class="timeline-item">Airport Documentation</div>
+
+<div class="timeline-item">Customer Service Procedures</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Professional Skills</h2>
+
+<div class="skill">
+Airport Ground Operations
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+Passenger Services
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+Airline Logistics
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="skill">
+Customer Service
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="contact">
+
+<a href="mailto:rizamtp9372@gmail.com">
+📧 Email
+</a>
+
+<a href="https://www.linkedin.com/in/rizam-t-p-0b1098292/" target="_blank">
+🔗 LinkedIn Profile
+</a>
+
+<a href="tel:+971523740357">
+📱 UAE Number
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 RIZAM T P | Aviation Portfolio
+</footer>
+
+</body>
+</html>
