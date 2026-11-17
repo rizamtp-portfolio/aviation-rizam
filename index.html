@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rizam T P | Aviation Portfolio</title>
+<title>Rizam T P | Aviation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -28,20 +28,27 @@ position:fixed;
 top:0;
 width:100%;
 background:#002244;
-padding:20px 50px;
+padding:18px 35px;
 display:flex;
 justify-content:space-between;
-z-index:999;
+align-items:center;
+z-index:1000;
 }
 
 nav h2{
 color:white;
+font-size:1.1rem;
+}
+
+nav div{
+display:flex;
+gap:20px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+font-size:.95rem;
 }
 
 .hero{
@@ -49,7 +56,6 @@ height:100vh;
 background:
 linear-gradient(rgba(0,25,55,.65),rgba(0,25,55,.65)),
 url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80');
-
 background-size:cover;
 background-position:center;
 
@@ -59,41 +65,42 @@ align-items:center;
 text-align:center;
 
 color:white;
+padding:20px;
 }
 
 .hero-content{
-animation:fadeUp 1.4s;
+animation:fadeUp 1s;
 }
 
 .hero h1{
-font-size:4.5rem;
+font-size:4rem;
+margin-bottom:15px;
 }
 
 .hero p{
-margin-top:15px;
+font-size:1.1rem;
 line-height:1.8;
-font-size:1.2rem;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:15px 30px;
+margin-top:25px;
+padding:14px 28px;
 background:white;
 color:#003366;
 text-decoration:none;
-border-radius:50px;
 font-weight:600;
+border-radius:40px;
 }
 
 section{
-padding:100px 10%;
+padding:90px 10%;
 }
 
 .title{
-text-align:center;
 font-size:2rem;
 color:#003366;
+text-align:center;
 margin-bottom:40px;
 }
 
@@ -106,12 +113,11 @@ gap:25px;
 .card{
 background:white;
 padding:25px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+border-radius:16px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
 
 opacity:0;
-transform:translateY(50px);
-
+transform:translateY(40px);
 transition:1s;
 }
 
@@ -124,11 +130,11 @@ transform:translateY(0);
 background:white;
 padding:20px;
 margin-bottom:15px;
-border-left:5px solid #0075ff;
+border-left:5px solid #0077ff;
+box-shadow:0 6px 15px rgba(0,0,0,.08);
 
 opacity:0;
-transform:translateX(-50px);
-
+transform:translateX(-40px);
 transition:1s;
 }
 
@@ -138,7 +144,7 @@ transform:translateX(0);
 }
 
 .skill{
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .bar{
@@ -146,11 +152,12 @@ height:12px;
 background:#ddd;
 border-radius:20px;
 overflow:hidden;
+margin-top:8px;
 }
 
 .fill{
 height:100%;
-background:#0075ff;
+background:#0077ff;
 }
 
 .contact{
@@ -168,19 +175,50 @@ color:#003366;
 footer{
 background:#002244;
 color:white;
-text-align:center;
 padding:25px;
+text-align:center;
 }
 
 @keyframes fadeUp{
+
 from{
 opacity:0;
 transform:translateY(50px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+padding:15px;
+gap:10px;
+}
+
+nav div{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:2.3rem;
+line-height:1.2;
+}
+
+.hero p{
+font-size:.95rem;
+}
+
+.title{
+font-size:1.6rem;
+}
+
 }
 
 </style>
@@ -190,7 +228,7 @@ transform:translateY(0);
 
 <nav>
 
-<h2>Rizam Aviation</h2>
+<h2>RIZAM T P</h2>
 
 <div>
 <a href="#about">About</a>
@@ -225,8 +263,8 @@ Download Aviation CV
 
 <h2 class="title">About Me</h2>
 
-<p style="text-align:center;max-width:900px;margin:auto;">
-BBA Aviation & Logistics graduate with aviation industry training through WingsWay Training Institute, Dubai. Passionate about airport operations, passenger handling, airline logistics and aviation service excellence.
+<p style="max-width:850px;margin:auto;text-align:center;line-height:1.8;">
+BBA Aviation & Logistics graduate with aviation industry training through WingsWay Training Institute, Dubai. Passionate about airport operations, passenger services, airline logistics and aviation support services across UAE and GCC countries.
 </p>
 
 </section>
@@ -259,17 +297,27 @@ BBA Aviation & Logistics graduate with aviation industry training through WingsW
 
 <section>
 
-<h2 class="title">Internship Timeline</h2>
+<h2 class="title">Internship & Training</h2>
 
-<div class="timeline-item">Passenger Check-In Procedures</div>
+<div class="timeline-item">
+Passenger Check-In Procedures
+</div>
 
-<div class="timeline-item">Baggage Handling Operations</div>
+<div class="timeline-item">
+Baggage Handling Operations
+</div>
 
-<div class="timeline-item">Boarding Coordination</div>
+<div class="timeline-item">
+Boarding Coordination
+</div>
 
-<div class="timeline-item">Airport Documentation</div>
+<div class="timeline-item">
+Airport Documentation
+</div>
 
-<div class="timeline-item">Customer Service Procedures</div>
+<div class="timeline-item">
+Customer Service Procedures
+</div>
 
 </section>
 
@@ -294,7 +342,14 @@ Passenger Services
 <div class="skill">
 Airline Logistics
 <div class="bar">
-<div class="fill" style="width:90%"></div>
+<div class="fill" style="width:88%"></div>
+</div>
+</div>
+
+<div class="skill">
+Customer Service
+<div class="bar">
+<div class="fill" style="width:95%"></div>
 </div>
 </div>
 
@@ -323,26 +378,29 @@ Airline Logistics
 </section>
 
 <footer>
-© 2026 RIZAM T P | Aviation Portfolio
+© 2026 RIZAM T P
 </footer>
 
 <script>
 
-const cards=document.querySelectorAll('.card,.timeline-item');
+const reveal=document.querySelectorAll('.card,.timeline-item');
 
-window.addEventListener('scroll',()=>{
+function animateItems(){
 
-cards.forEach(card=>{
+reveal.forEach(item=>{
 
-const top=card.getBoundingClientRect().top;
+const top=item.getBoundingClientRect().top;
 
 if(top<window.innerHeight-100){
-card.classList.add('show');
+item.classList.add('show');
 }
 
 });
 
-});
+}
+
+window.addEventListener('scroll',animateItems);
+animateItems();
 
 </script>
 
